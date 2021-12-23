@@ -1,50 +1,50 @@
 // WA Blast RPA By ardhie
-click imgs/maximize_chrome.png
+icon_attach = 'https://raw.githubusercontent.com/ardyan69/wa/main/imgs/icon_attach.png'
+icon_seldoc = 'https://raw.githubusercontent.com/ardyan69/wa/main/imgs/icon_seldoc.png'
+wa_send = 'https://raw.githubusercontent.com/ardyan69/wa/main/imgs/wa_send.png'
 
-load wablast.csv to dataWA
+load `p1` to csvData
+data = csvData.split('\n')
+data_length = data.length-1
 
-data = dataWA.split('\n')
-attach = data[1].trim()
-icon_attach = ""
+load `p3` to txtmsg
 
-if attach not equals to ''
-  icon_attach = attach
-  if attach equals to 'image'
-    file://`data[2].trim()`
-    rclick (683,333)
-    click imgs/copy_image.png
-  
-click imgs/wa_app.png
+if p2 not equals to 'empty'
+  attach = p2
+else
+  attach = ''
 
-whatsapp://send?phone=`data[3].trim()`&text=`data[0].trim()`
+attach_doc = attach.split(',')
+
+clipboard(attach)
+
+whatsapp://send?phone=`data[0].trim()`&text=`txtmsg`
 wait 2
 if attach not equals to ''
-  if attach equals to 'image'
-    keyboard [ctrl]v
-  else
-    click imgs/icon_attach.png
-    click imgs/icon_seldoc.png
-    click imgs/icon_`icon_attach`.png
-    keyboard [enter]
-  click imgs/wa_send.png
-wait 0.425
+  if attach_doc.length more than 0
+    for x from 0 to attach_doc.length-1
+      click `icon_attach`
+      click `icon_seldoc`
+      clipboard(attach_doc[x].trim())
+      keyboard [ctrl]v[enter]
+      click `wa_send`
+      wait 0.325
 keyboard [enter]
 keyboard [enter]
 keyboard [enter]
 
-for n from 4 to data.length-1
-  whatsapp://send?phone=`data[n].trim()`&text=`data[0].trim()`
-  wait 1.65
+for n from 1 to data_length
+  whatsapp://send?phone=`data[n].trim()`&text=`txtmsg`
+  wait 1.75
   if attach not equals to ''
-    if attach equals to 'image'
-      keyboard [ctrl]v
-    else
-      click imgs/icon_attach.png
-      click imgs/icon_seldoc.png
-      click imgs/icon_`icon_attach`.png
-      keyboard [enter]
-    click imgs/wa_send.png
-  wait 0.425
+    if attach_doc.length more than 0
+      for x from 0 to attach_doc.length-1
+        click `icon_attach`
+        click `icon_seldoc`
+        clipboard(attach_doc[x].trim())
+        keyboard [ctrl]v[enter]
+        click `wa_send`
+        wait 0.325
   keyboard [enter]
   keyboard [enter]
   keyboard [enter]

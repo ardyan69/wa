@@ -2,7 +2,7 @@
 
 # Whatsapp Blasting with TAGUI RPA
 
-**Test on `Windows 10`, with `Google Chrome v79` and `Whatsapp Desktop`**
+**Test on `Windows 10` with `Google Chrome v79` and `Whatsapp Desktop`**
 
 Using PROTOCOL for opening Whatsapp Application.
 

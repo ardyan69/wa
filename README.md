@@ -17,7 +17,7 @@ But with the protocol, you will be directly directed to the whatsapp application
 Use an old version of Google Chrome, with version 79 or older, because Google Chrome from version 80 or later, Google Chrome disables the PROTOCOL handler prompt, so we have to add a click process if using the latest version of Google Chrome.
 
 Feature:
-- can send multiple documents attachment.
-- can make schedule for runnig blast later.
+- Can send multiple documents attachment.
+- Can create schedule for running Blast later.
 
 ![ui_wablast](https://raw.githubusercontent.com/ardyan69/wa/main/imgs/ui_wablast.png)

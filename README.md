@@ -1,3 +1,5 @@
+<img src="https://raw.githubusercontent.com/ardyan69/wa/main/imgs/logo-hotag-A.png" height="111" align="right">
+
 # Whatsapp Blasting with TAGUI RPA
 
 **Test on `Windows 10`, with `Google Chrome v79`**

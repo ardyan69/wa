@@ -1,12 +1,12 @@
 # Whatsapp Blasting with TAGUI RPA
 
-Test on Windows 10, with Google Chrome v79
+**Test on `Windows 10`, with `Google Chrome v79`
 
 Using PROTOCOL for opening Whatsapp Application.
 
 PROTOCOL is like:
 
-mailto:// - tel:// - etc
+`mailto://` - `tel://` - etc
 
 By using the PROTOCOL makes the process 15%~20% faster.
 Because if you use a link like this https://api.whatsapp.com/send?phone=PHONENUMBER&text=TEXTMESSAGE, you have to click the button to proceed to whatsapp app.

@@ -9,7 +9,7 @@ Using PROTOCOL for opening Whatsapp Application.
 
 PROTOCOL is like:
 
-`mailto://` - `tel://` - `file://` - `ftp://` - etc
+`whatsapp://` -`mailto://` - `tel://` - `file://` - `ftp://` - `http://` - `https://` - etc
 
 By using the PROTOCOL makes the process 15%~20% faster.
 Because if you use a link like this https://api.whatsapp.com/send?phone=PHONENUMBER&text=TEXTMESSAGE, you have to click the button to proceed to whatsapp app.

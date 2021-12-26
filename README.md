@@ -3,6 +3,7 @@
 # Whatsapp Blasting with TAGUI RPA
 
 **Test on `Windows 10` with `Google Chrome v79` and `Whatsapp Desktop`**
+Resolutin: 1366 x 768
 
 Using PROTOCOL for opening Whatsapp Application.
 

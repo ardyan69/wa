@@ -31,4 +31,17 @@ I created a User Interface using a batch script, run the `wablast.bat` file.
 - `Attach Doc Path` if you want to send a file attachment, enter the folder path where you save the file you want to send. Of course, you can also send more than one file attachment, by using (comma) in each path. Or if you only want to send text messages, leave this field blank.
 - `Text Message` what text do you want to send.
 - `Create Schedule` Yes or No. Run the script for later at the time you want. If you select No, then the script will run immediately.
-- `Schedule Date Time` DD/MM/YYYY - HH-MM. Because the settings on my windows are in the Indonesian region and the date format is DD/MM/YYYY, check the date and time format on your windows to fill this out.
+- `Schedule Date Time` DD/MM/YYYY - HH-MM. Because the settings on my windows are in the Indonesian region and the date format is DD/MM/YYYY, check the date and time format on your windows to fill this out. If you select No on `Create Schedule`, leave this fields blank.
+
+#### How o Use:
+- Install TAGUI on your Windows, https://tagui.readthedocs.io/en/latest/setup.html
+- Create new folder with name `schedule` on `C:\tagui\`
+- Replace the script below which is in the file `tagui/src/tagui_parse.php`
+
+Search:
+>_if ((substr($lc_raw_intent,0,7)=="http://") or (substr($lc_raw_intent,0,8)=="https://") or (substr($lc_raw_intent,0,4)=="www.") or (substr($lc_raw_intent,0,11)=="about:blank")) return "url"; // recognizing about:blank as valid URL as it is part of HTML5 standard_
+
+Replace:
+>_if ((substr($lc_raw_intent,0,7)=="file://") or (substr($lc_raw_intent,0,7)=="http://") or (substr($lc_raw_intent,0,8)=="https://") or (substr($lc_raw_intent,0,4)=="www.") or (substr($lc_raw_intent,0,11)=="whatsapp://") or (substr($lc_raw_intent,0,11)=="about:blank")) return "url"; // recognizing about:blank as valid URL as it is part of HTML5 standard_
+- Open your Whatsapp Desktop App and maximize.
+- Open `wablast.bat`

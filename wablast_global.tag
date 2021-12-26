@@ -12,7 +12,7 @@ else
   attach = ''
 
 whatsapp://send?phone=`data[0].trim()`&text=`txtmsg`
-wait 3.75
+wait 3.25
 if attach not equals to ''
   attach_doc = attach.split(',')
   if attach_doc.length more than 0
@@ -22,15 +22,15 @@ if attach not equals to ''
       click (430,430)
       clipboard(attach_doc[x].trim())
       keyboard [ctrl]v[enter]
-      wait 2.75
+      wait 2.25
       click (977,677)
 keyboard [enter]
 keyboard [enter]
 keyboard [enter]
 
-for n from 1 to data_length
+for n from 1 to data_length-1
   whatsapp://send?phone=`data[n].trim()`&text=`txtmsg`
-  wait 3.75
+  wait 3.25
   if attach not equals to ''
     if attach_doc.length more than 0
       for x from 0 to attach_doc.length-1
@@ -39,11 +39,27 @@ for n from 1 to data_length
         click (430,430)
         clipboard(attach_doc[x].trim())
         keyboard [ctrl]v[enter]
-        wait 2.75
+        wait 2.25
         click (977,677)
   keyboard [enter]
   keyboard [enter]
   keyboard [enter]
+
+whatsapp://send?phone=`data[data_length].trim()`&text=`txtmsg`
+wait 3.25
+if attach not equals to ''
+  if attach_doc.length more than 0
+    for x from 0 to attach_doc.length-1
+      click (430,696)
+      wait 0.15
+      click (430,430)
+      clipboard(attach_doc[x].trim())
+      keyboard [ctrl]v[enter]
+      wait 2.25
+      click (977,677)
+keyboard [enter]
+keyboard [enter]
+keyboard [enter]
 
 echo "Whatsapp Blasting End........."
 run cmd /c del `p2` /s /f /q

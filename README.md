@@ -23,4 +23,5 @@ Feature:
 
 
 I created a User Interface using a batch script, run the `wablast.bat` file.
+
 ![ui_wablast](https://raw.githubusercontent.com/ardyan69/wa/main/imgs/ui_wablast.png)

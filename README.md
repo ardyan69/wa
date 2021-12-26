@@ -26,8 +26,8 @@ I created a User Interface using a batch script, run the `wablast.bat` file.
 
 ![ui_wablast](https://raw.githubusercontent.com/ardyan69/wa/main/imgs/ui_wablast.png)
 
-- CSV File Path; enter the folder path where you saved your CSV doc, this CVS is the data for the whatsapp number, don't forget to add the area code for each whatsapp number.
-- Attach Doc Path; if you want to send a file attachment, enter the folder path where you save the file you want to send. Of course, you can also send more than one file attachment, by using (comma) in each path. Or if you only want to send text messages, leave this field blank.
-- Text Message; what text do you want to send.
-- Create Schedule; Yes or No. Run the script for later at the time you want. If you select No, then the script will run immediately.
-- Schedule Date Time; DD/MM/YYYY - HH-MM. Because the settings on my windows are in the Indonesian region and the date format is DD/MM/YYYY, check the date and time format on your windows to fill this out.
+- `CSV File Path`; enter the folder path where you saved your CSV doc, this CVS is the data for the whatsapp number, don't forget to add the area code for each whatsapp number.
+- `Attach Doc Path`; if you want to send a file attachment, enter the folder path where you save the file you want to send. Of course, you can also send more than one file attachment, by using (comma) in each path. Or if you only want to send text messages, leave this field blank.
+- `Text Message`; what text do you want to send.
+- `Create Schedule`; Yes or No. Run the script for later at the time you want. If you select No, then the script will run immediately.
+- `Schedule Date` Time; DD/MM/YYYY - HH-MM. Because the settings on my windows are in the Indonesian region and the date format is DD/MM/YYYY, check the date and time format on your windows to fill this out.
